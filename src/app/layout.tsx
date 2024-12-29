@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/shared/Navbar";
+import Providers from "@/lib/Providers";
 
 export const metadata: Metadata = {
   title: "Shakib Al Furqan",
@@ -15,8 +16,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`antialiased`}>
-        <Navbar />
-        {children}
+        <Providers>
+          <Navbar />
+          {children}
+        </Providers>
       </body>
     </html>
   );

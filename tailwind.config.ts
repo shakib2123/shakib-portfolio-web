@@ -1,18 +1,28 @@
+import { nextui } from "@nextui-org/react";
 import type { Config } from "tailwindcss";
 
-export default {
+const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        "gradient-1": "linear-gradient(to right bottom, #212428, #16181c)",
+        primary: "#ff014f",
+      },
+      boxShadow: {
+        "custom-shadow-1": "10px 10px 19px #1c1e22, -10px -10px 19px #262a2e",
+        "custom-shadow-2": "21px 21px 19px #181a1d, -21px -21px 19px #202225;",
       },
     },
   },
-  plugins: [],
-} satisfies Config;
+  darkMode: "class",
+  plugins: [nextui()],
+};
+export default config;

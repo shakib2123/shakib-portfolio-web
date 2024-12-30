@@ -15,7 +15,7 @@ export default function ViewAndDownloadResume() {
   };
 
   return (
-    <section className="pt-10 lg:pt-24 flex items-center gap-3 md:gap-6">
+    <section className="pt-10 lg:pt-20 flex items-center gap-3 md:gap-6">
       <Link href="/files/demo.jpeg" target="_blank">
         <Button
           onClick={playClickSound}

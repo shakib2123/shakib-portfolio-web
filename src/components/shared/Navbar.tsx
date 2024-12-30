@@ -5,7 +5,9 @@ import Image from "next/image";
 import logo from "@/assets/s-logo.png";
 import Link from "next/link";
 import { useSound } from "@/context/sound.context";
-import MobileNavbar from "./MobileNavbar";
+
+import { montserrat } from "@/fonts";
+import MobileNavbarMenu from "./MobileNavbarMenu";
 
 export default function Navbar() {
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -84,53 +86,57 @@ export default function Navbar() {
               height={100}
               className="w-6 md:w-8"
             />
-            <h1 className="text-xl md:text-2xl font-semibold">SHAKIB</h1>
+            <h1
+              className={`text-xl md:text-2xl font-semibold  ${montserrat.className}`}
+            >
+              SHAKIB
+            </h1>
           </Link>
 
-          <MobileNavbar />
-          <div className="hidden md:flex items-center gap-4">
+          <MobileNavbarMenu />
+          <div className="hidden lg:flex items-center gap-4">
             <Link
               href={"/#home"}
               onMouseEnter={playHoverSound}
-              className={`p-2 hover:text-primary text-sm ${
-                path === "home" ? "text-white" : ""
-              }`}
+              className={`p-2 hover:text-primary text-sm 
+                ${montserrat.className} 
+              ${path === "home" ? "text-white" : ""}`}
             >
               HOME
             </Link>
             <Link
               href={`/#skills`}
               onMouseEnter={playHoverSound}
-              className={`p-2 hover:text-primary text-sm ${
-                path === "skills" ? "text-white" : ""
-              }`}
+              className={`p-2 hover:text-primary text-sm
+                 ${montserrat.className}
+               ${path === "skills" ? "text-white" : ""}`}
             >
               SKILLS
             </Link>
             <Link
               href={`/#projects`}
               onMouseEnter={playHoverSound}
-              className={`p-2 hover:text-primary text-sm ${
-                path === "projects" ? "text-white" : ""
-              }`}
+              className={`p-2 hover:text-primary text-sm 
+                ${montserrat.className} 
+              ${path === "projects" ? "text-white" : ""}`}
             >
               PROJECTS
             </Link>
             <Link
               href={`/#blog`}
               onMouseEnter={playHoverSound}
-              className={`p-2 hover:text-primary text-sm ${
-                path === "blog" ? "text-white" : ""
-              }`}
+              className={`p-2 hover:text-primary text-sm
+                 ${montserrat.className}
+                ${path === "blog" ? "text-white" : ""}`}
             >
               BLOG
             </Link>
             <Link
               href={`/#contact`}
               onMouseEnter={playHoverSound}
-              className={`p-2 hover:text-primary text-sm ${
-                path === "contact" ? "text-white" : ""
-              }`}
+              className={`p-2 hover:text-primary text-sm
+                 ${montserrat.className}
+                ${path === "contact" ? "text-white" : ""}`}
             >
               CONTACT
             </Link>

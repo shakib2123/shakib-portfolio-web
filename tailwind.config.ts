@@ -13,12 +13,14 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        "gradient-1": "linear-gradient(to right bottom, #212428, #16181c)",
         primary: "#ff014f",
         secondary: "#c4cfde",
       },
+      backgroundImage: {
+        "gradient-1": "linear-gradient(to right bottom, #212428, #16181c)",
+      },
       boxShadow: {
-        "custom-shadow-1": "10px 10px 19px #1c1e22, -10px -10px 19px #262a2e",
+        "custom-shadow-1": "10px 10px 20px #1c1e22, -10px -10px 20px #262a2e",
         "custom-shadow-2": "21px 21px 19px #181a1d, -21px -21px 19px #202225;",
       },
     },

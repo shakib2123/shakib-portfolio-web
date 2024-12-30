@@ -10,8 +10,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { IoCloseSharp, IoMenu } from "react-icons/io5";
 import logo from "@/assets/s-logo.png";
+import { montserrat } from "@/fonts";
 
-export default function MobileNavbar() {
+export default function MobileNavbarMenu() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const { isMuted } = useSound();
 
@@ -30,7 +31,7 @@ export default function MobileNavbar() {
   };
 
   return (
-    <div className="sm:hidden">
+    <div className="lg:hidden">
       <button
         onClick={() => {
           onOpen();
@@ -67,7 +68,7 @@ export default function MobileNavbar() {
                     height={100}
                     className="w-6"
                   />
-                  <h1 className="text-xl font-semibold">SHAKIB</h1>
+                  <h1 className={`text-xl font-semibold`}>SHAKIB</h1>
                 </Link>
                 <button
                   onClick={() => {
@@ -86,7 +87,7 @@ export default function MobileNavbar() {
                     onClose();
                     playLinkSound();
                   }}
-                  className="py-1"
+                  className={`py-1 ${montserrat.className}`}
                 >
                   HOME
                 </Link>
@@ -96,7 +97,7 @@ export default function MobileNavbar() {
                     onClose();
                     playLinkSound();
                   }}
-                  className="py-1"
+                  className={`py-1 ${montserrat.className}`}
                 >
                   SKILLS
                 </Link>
@@ -106,7 +107,7 @@ export default function MobileNavbar() {
                     onClose();
                     playLinkSound();
                   }}
-                  className="py-1"
+                  className={`py-1 ${montserrat.className}`}
                 >
                   PROJECTS
                 </Link>
@@ -116,7 +117,7 @@ export default function MobileNavbar() {
                     onClose();
                     playLinkSound();
                   }}
-                  className="py-1"
+                  className={`py-1 ${montserrat.className}`}
                 >
                   BLOG
                 </Link>
@@ -126,7 +127,7 @@ export default function MobileNavbar() {
                     onClose();
                     playLinkSound();
                   }}
-                  className="py-1"
+                  className={`py-1 ${montserrat.className}`}
                 >
                   CONTACT
                 </Link>

@@ -15,6 +15,7 @@ const config: Config = {
         foreground: "var(--foreground)",
         "gradient-1": "linear-gradient(to right bottom, #212428, #16181c)",
         primary: "#ff014f",
+        secondary: "#c4cfde",
       },
       boxShadow: {
         "custom-shadow-1": "10px 10px 19px #1c1e22, -10px -10px 19px #262a2e",
@@ -23,6 +24,12 @@ const config: Config = {
     },
   },
   darkMode: "class",
-  plugins: [nextui()],
+  plugins: [
+    nextui({
+      themes: {
+        dark: { colors: { background: "#212428", foreground: "#c4cfde" } },
+      },
+    }),
+  ],
 };
 export default config;

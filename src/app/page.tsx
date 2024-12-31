@@ -1,4 +1,5 @@
 import Banner from "@/components/Banner/Banner";
+import Contact from "@/components/Contact/Contact";
 import Footer from "@/components/Footer/Footer";
 import Projects from "@/components/Projects/Projects";
 import BackToTopButton from "@/components/shared/BackToTop";
@@ -13,6 +14,7 @@ export default function HomePage() {
       <Banner />
       <Skills />
       <Projects />
+      <Contact />
       <Footer />
     </section>
   );

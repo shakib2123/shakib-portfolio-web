@@ -6,7 +6,6 @@ import { Divider } from "@nextui-org/react";
 import Image from "next/image";
 import logo from "@/assets/s-logo.png";
 import Link from "next/link";
-import { FaFacebookF } from "react-icons/fa6";
 import { FiFacebook, FiLinkedin, FiTwitter } from "react-icons/fi";
 
 export default function Footer() {
@@ -41,22 +40,25 @@ export default function Footer() {
           </h1>
         </section>
 
-        <div className="w-full flex justify-end gap-4">
+        <div className="w-full flex justify-end items-center gap-4">
           <Link
             href={"/"}
-            className="text-xl text-secondary hover:text-primary hover:-translate-y-1 hover:bg-gradient-to-r from-black/30 to-black/30 transition-all duration-300 rounded-lg bg-gradient-1 p-4"
+            onClick={playClickSound}
+            className="text-xl text-secondary hover:text-primary hover:-translate-y-1 hover:bg-gradient-to-r from-black/30 to-black/30 transition-all duration-300 rounded-lg bg-gradient-1 p-4 shadow-custom-shadow-1"
           >
             <FiFacebook />
           </Link>
           <Link
             href={"/"}
-            className="text-xl text-secondary hover:text-primary hover:-translate-y-1 hover:bg-gradient-to-r from-black/30 to-black/30 transition-all duration-300 rounded-lg bg-gradient-1 p-4"
+            onClick={playClickSound}
+            className="text-xl text-secondary hover:text-primary hover:-translate-y-1 hover:bg-gradient-to-r from-black/30 to-black/30 transition-all duration-300 rounded-lg bg-gradient-1 p-4 shadow-custom-shadow-1"
           >
             <FiTwitter />
           </Link>
           <Link
             href={"/"}
-            className="text-xl text-secondary hover:text-primary hover:-translate-y-1 hover:bg-gradient-to-r from-black/30 to-black/30 transition-all duration-300 rounded-lg bg-gradient-1 p-4"
+            onClick={playClickSound}
+            className="text-xl text-secondary hover:text-primary hover:-translate-y-1 hover:bg-gradient-to-r from-black/30 to-black/30 transition-all duration-300 rounded-lg bg-gradient-1 p-4 shadow-custom-shadow-1"
           >
             <FiLinkedin />
           </Link>

@@ -19,7 +19,7 @@ export default function ViewAndDownloadResume() {
       <Link href="/files/demo.jpeg" target="_blank">
         <Button
           onClick={playClickSound}
-          className="bg-[#212428] p-6 md:p-8 text-primary text-medium transition-all duration-100 hover:bg-black/20 shadow-custom-shadow-1 hover:scale-105"
+          className="bg-[#212428] p-6 md:p-8 text-primary text-medium transition-all duration-100 hover:bg-black/30 shadow-custom-shadow-1 hover:scale-105"
         >
           View Resume
         </Button>
@@ -28,7 +28,7 @@ export default function ViewAndDownloadResume() {
       <Link href="/files/demo.jpeg" download>
         <Button
           onClick={playClickSound}
-          className="bg-[#212428] p-6 md:p-8 text-secondary text-medium transition-all duration-100 hover:bg-black/20 shadow-custom-shadow-1 hover:scale-105"
+          className="bg-[#212428] p-6 md:p-8 text-secondary text-medium transition-all duration-100 hover:bg-black/30 shadow-custom-shadow-1 hover:scale-105"
         >
           Download Resume
         </Button>
